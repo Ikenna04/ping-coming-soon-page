@@ -1,0 +1,337 @@
+/* | IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/* | CSS RESET  */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	line-height: 1.5;
+}
+
+/* | UTILITY CLASSES */
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+li {
+	list-style-type: none;
+}
+
+.cp {
+	cursor: pointer;
+}
+
+/* | VARIABLES */
+:root {
+	/* | COLORS  */
+	--blue: hsl(223, 87%, 63%);
+	--pale-blue: hsl(223, 100%, 88%);
+	--light-red: hsl(354, 100%, 66%);
+	--gray: hsl(0, 0%, 59%);
+	--gery-dark-blue: hsl(209, 33%, 12%);
+
+	/* | FONTS  */
+	--h1-font: 300 45px 'Libre Franklin';
+	--body-font: 600 16px 'Libre Franklin';
+	--p-font: 300 20px 'Libre Franklin';
+	--copy-font: 300 12px 'Libre Franklin';
+}
+
+/* | GENERAL STYLES */
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding-block: 86px 50px;
+	color: var(--gray);
+	font: var(--body-font);
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 72px;
+}
+
+.container {
+	width: 640px;
+	height: auto;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+
+.container > li {
+	width: 100%;
+}
+
+.container > li:first-child {
+	width: 86px;
+	margin-bottom: -22px;
+}
+
+.main {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+h1 {
+	font: var(--h1-font);
+	margin-bottom: -16px;
+}
+
+h1 span {
+	font-weight: 700;
+	color: var(--gery-dark-blue);
+}
+
+.main p {
+	font: var(--p-font);
+	color: var(--gery-dark-blue);
+}
+
+form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+.input {
+	width: 65.6%;
+	position: relative;
+}
+
+input {
+	font: inherit;
+}
+
+input[type='email'] {
+	width: 100%;
+	height: 56px;
+	padding-inline: 30px;
+	font-weight: 300;
+	border: 1px solid var(--gray);
+	border-radius: 50px;
+	outline: none;
+}
+
+input[type='email']:focus-within {
+	outline: 1px solid var(--light-red);
+	border: none;
+}
+
+.input p {
+	color: var(--light-red);
+	font-weight: 300;
+	font-style: italic;
+	display: none;
+	position: absolute;
+	top: 60px;
+	left: 32px;
+	white-space: nowrap;
+}
+
+.btn {
+	width: 31.2%;
+	height: 56px;
+	border-radius: 50px;
+	background-color: var(--blue);
+	color: var(--pale-blue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 10px 20px 0 var(--pale-blue);
+	border: none;
+}
+
+footer {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 27px;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+.socials li {
+	width: 31px;
+	height: 31px;
+	border-radius: 50%;
+	border: 1px solid var(--pale-blue);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socials img {
+	height: 16px;
+	width: auto;
+}
+
+.socials img[alt='Twitter Icon'] {
+	width: 15px;
+	height: auto;
+}
+
+.disn {
+	display: none;
+}
+
+.socials li:hover {
+	background-color: var(--blue);
+	border: none;
+}
+
+.socials li:hover .disf {
+	display: none;
+}
+
+.socials li:hover .disn {
+	display: block;
+}
+
+footer > p {
+	font: var(--copy-font);
+}
+
+@media screen and (max-width: 750px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--h1-font: 300 1.75em 'Libre Franklin';
+		--p-font: 600 1em 'Libre Franklin';
+		--body-font: 300 24px 'Libre Franklin';
+		--copy-font: 300 0.8em 'Libre Franklin';
+	}
+
+	/* | GENERAL STYLES */
+	html {
+		width: 100%;
+		/* height: 67.67em; */
+		height: auto;
+	}
+
+	body {
+		padding: 7.1em 2.3em 3.1em;
+		justify-content: space-between;
+		gap: 10em;
+	}
+
+	.container {
+		width: 100%;
+		gap: 3.2em;
+	}
+
+	.container > li:first-child {
+		width: 4.5em;
+		margin-bottom: 0.63em;
+	}
+
+	.main {
+		gap: 2.67em;
+	}
+
+	h1 {
+		margin-bottom: -0.9em;
+	}
+
+	form {
+		flex-flow: column;
+		gap: 3.5em;
+	}
+
+	.input {
+		width: 100%;
+	}
+
+	input[type='email'] {
+		width: 100%;
+		height: 3.3em;
+		padding-inline: 2.67em;
+		border: 2px solid var(--gray);
+	}
+
+	input[type='email']:focus-within {
+		outline: 2px solid var(--light-red);
+	}
+
+	.input p {
+		top: 3.6em;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.btn {
+		width: 100%;
+		height: 3.3em;
+	}
+
+	footer {
+		gap: 2.3em;
+	}
+
+	.socials {
+		gap: 1em;
+	}
+
+	.socials li {
+		width: 2.6em;
+		height: 2.6em;
+		border: 2px solid var(--pale-blue);
+	}
+
+	.socials img {
+		height: 1.25em;
+	}
+
+	.socials img[alt='Twitter Icon'] {
+		width: 1.1em;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-font: 300 18px 'Libre Franklin';
+	}
+}
+
+@media screen and (max-width: 450px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-font: 300 14px 'Libre Franklin';
+	}
+}
+
+@media screen and (max-width: 375px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-font: 300 12px 'Libre Franklin';
+	}
+}
